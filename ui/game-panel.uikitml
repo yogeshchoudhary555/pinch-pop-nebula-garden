@@ -1,0 +1,143 @@
+<!--
+  Pinch Pop: Nebula Garden - HUD / menu panel.
+  Panel, Button and ButtonLabel come from the bundled Horizon kit.
+  The :dark styles apply because iwsdk.config.json prefers dark scheme.
+-->
+<style>
+  .panel-root {
+    flex-direction: column;
+    width: 460px;
+  }
+
+  .panel-content {
+    flex-direction: column;
+    gap: 7px;
+    padding-top: 20px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .eyebrow {
+    color: #6d28d9;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+  }
+
+  .eyebrow:dark {
+    color: #c4b5fd;
+  }
+
+  .heading {
+    color: #1c1d20;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+
+  .heading:dark {
+    color: #fafaf7;
+  }
+
+  .body {
+    color: #3a3b40;
+    font-size: 17px;
+    line-height: 23px;
+  }
+
+  .body:dark {
+    color: #dddfe3;
+  }
+
+  .stats-row {
+    flex-direction: row;
+    gap: 18px;
+    margin-top: 4px;
+  }
+
+  .stat {
+    color: #1c1d20;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .stat:dark {
+    color: #ffffff;
+  }
+
+  .target-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2px;
+  }
+
+  .target-label-text {
+    color: #3a3b40;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .target-label-text:dark {
+    color: #c9cbd1;
+  }
+
+  .target-chip {
+    background-color: #22d3ee;
+    border-radius: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .target-chip-text {
+    color: #101014;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .best {
+    color: #6b7280;
+    font-size: 14px;
+  }
+
+  .best:dark {
+    color: #9ca3af;
+  }
+
+  .button {
+    justify-content: center;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+  }
+
+  .button-label {
+    transform-translate-y: 1px;
+  }
+</style>
+<Panel class="panel-root">
+  <div class="panel-content">
+    <div class="eyebrow">PINCH POP | NEBULA GARDEN</div>
+    <div id="game-title" class="heading">Pinch Pop</div>
+    <div id="game-message" class="body">Pinch the glowing orb - or tap Start. Pop the ring color to build combos!</div>
+    <div class="stats-row">
+      <div id="stat-score" class="stat">Score 0</div>
+      <div id="stat-streak" class="stat">Streak 0</div>
+      <div id="stat-time" class="stat">3:00</div>
+    </div>
+    <div class="target-row">
+      <div class="target-label-text">TARGET</div>
+      <div id="target-chip" class="target-chip">
+        <div id="target-label" class="target-chip-text">POP CYAN</div>
+      </div>
+    </div>
+    <div id="stat-best" class="best">Best 0 | Day streak 0</div>
+  </div>
+  <Button id="start-button" class="button">
+    <ButtonLabel id="start-label" class="button-label">Start Round</ButtonLabel>
+  </Button>
+</Panel>
